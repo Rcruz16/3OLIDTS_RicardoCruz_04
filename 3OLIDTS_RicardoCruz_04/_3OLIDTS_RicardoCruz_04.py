@@ -3,11 +3,11 @@ import tkinter as tk
 
 def reset():
     
-    entry1.delate(0, tk.END)
+    entry1.delete(0, tk.END)
     entry1.insert(0, "0.0")
-    entry2.delate(0, tk.END)
+    entry2.delete(0, tk.END)
     entry2.insert(0, "0.0")
-
+    
 
 def convert_to_Fahrenheit():
     celsius = float(entry2.get())
@@ -44,8 +44,8 @@ entry2.grid(row=1, column=1)
 button2 = tk.Button(app, text="Convertir a Fahrenheit", command=convert_to_Fahrenheit)
 button2.grid(row=1, column=2)
 
-button3 = tk.Button(app, text="Resetear", command=reset)
-button3.grid(row=2, column=1)
+button3 = tk.Button(app, text = "restablecer", command = reset)
+button3.grid(row = 2, column = 1)
 
 app.mainloop()
 
